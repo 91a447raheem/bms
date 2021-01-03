@@ -540,12 +540,28 @@ footer {
 .mapBlock.block .title, .cellDataBlock.block .title, .staticBlock.block .title, .mapBlock.block .subtitle, .cellDataBlock.block .subtitle, .staticBlock.block .subtitle{
     text-align: center;
 }
+.betteryBlock {
+    width: 16.666%;
+    float: left;
+    padding: 0px 9px;
+}
+.betteryBlock {
+    width: 16.666%;
+    float: left;
+    padding: 11px 9px;
+    border-bottom: 3px solid #dfdfdf;
+}
 .mapBlock.block .title, .cellDataBlock.block .title, .staticBlock.block .title{
     font-size:24px;
     font-weight: bold;
     margin-bottom:5px;
 }
-
+.popupBlockMain .popupHeader span {
+    float: right;
+    width: 42px;
+    margin-top: 12px;
+    font-weight: bold;
+}
 .tabs { list-style: none; }
 .tabs li { display: inline; }
 ul.tabs.group li.active a {

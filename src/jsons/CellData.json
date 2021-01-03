@@ -111,6 +111,16 @@
             "tempStatus": "discharging",
             "cellTitle": "Cell 1- Charging",
             "batteryInfo": "2.063 V - 24"
+        },
+        {
+            "tempStatus": "hightemp",
+            "cellTitle": "Cell 1- Charging",
+            "batteryInfo": "2.063 V - 24"
+        },
+        {
+            "tempStatus": "discharging",
+            "cellTitle": "Cell 1- Charging",
+            "batteryInfo": "2.063 V - 24"
         }
     ]
 }
