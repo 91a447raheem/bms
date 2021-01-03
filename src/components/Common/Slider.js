@@ -14,7 +14,7 @@ const SliderBlock = () => {
 
     let items = itemList.map((item, index) => {
         return (<div className="block" onClick={handleClick}>
-            <div className="title">Cell Voltage (24)</div>
+            <div className="title">Cell <br></br>Voltage (24)</div>
             <div className="images"><img src={BatteryStatusIcon} /></div>
             <div className="subtitle">normal</div>
         </div>)

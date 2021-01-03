@@ -33,7 +33,7 @@ const Login = () => {
                 </div>
             </div>
             <button type="submit">Sign In</button>
-            <label>
+            <label style={{textAlign:'center',width:'100%'}}>
                 <span className="psw"> <a href="#">Forgot password?</a></span>
             </label>
         </div>
