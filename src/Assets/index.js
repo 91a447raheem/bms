@@ -7,6 +7,7 @@ import statisticsIcon from './statistics-icon.png'
 import technicalDetailsIcon from './technical-details-icon.png'
 import notificationBell from './notification-bell.png'
 import batteryCharging from './charging-battery.png'
+import temparatureIcon from './temparature.png'
 export {
     IOT_icon,
     Login,
@@ -16,5 +17,6 @@ export {
     statisticsIcon,
     technicalDetailsIcon,
     notificationBell,
-    batteryCharging
+    batteryCharging,
+    temparatureIcon
 }

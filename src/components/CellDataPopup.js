@@ -1,6 +1,6 @@
 import React from 'react';
 import { Loader } from './Common'
-import { returnActioncls } from '../utils'
+import { temparatureIcon } from '../Assets';
 const CellDataPopup = (props) => {
     const { closePopup, dataResponse, loading } = props
     const { data, location, percentage } = dataResponse
@@ -42,32 +42,17 @@ const CellDataPopup = (props) => {
                                 </div></div>
                             </div>
                             <div className="popupTable">
-                                <table>
-                                    <tbody><tr>
-                                        <th>Cell No</th>
-                                        <th>Cell ID</th>
-                                        <th>Bettery Status</th>
-                                        <th>Voltage</th>
-                                        <th>Centegrate</th>
-                                        <th>Temparature</th>
-                                        <th>Present Condition</th>
-                                        <th>Action</th>
-                                    </tr>
-                                        {data && data.map((record, index) => {
-                                            return <tr key={index}>
-                                                <td>{index}</td>
-                                                <td>{record.cellId}</td>
-                                                <td>{record.batteryStatus}</td>
-                                                <td>{record.voltage}</td>
-                                                <td>{record.centegrade}<sup>0</sup></td>
-                                                <td>{record.temparature}<sup>0</sup></td>
-                                                <td>{record.presentCondition}</td>
-                                                <td className={returnActioncls(record.action)}>{record.action}</td>
-                                            </tr>
-                                        })}
-                                    </tbody>
-                                </table>
+                                {data && data.map((record, index) => {
+                                    return <div className="betteryBlock">
+                                        <div className="betteryStatusImage"><img src={temparatureIcon} /></div>
+                                        <div className="betteryInformation">
+                                            <div className="betteryname">Cell 1-<br /> Charging</div>
+                                            <div className="betteryinfo">2.063 V - 24<sup>0</sup>C</div>
+                                        </div>
+                                    </div>
+                                })}
                             </div>
+
                         </div>}
                     </div>
                 </div>
