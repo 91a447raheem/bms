@@ -1,18 +1,25 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     margin: 0;
 }
-
+@font-face {
+    font-family: Helvetica;
+    src: url(fonts/Helvetica.ttf);
+  }
+  @font-face {
+    font-family: HelveticaBold;
+    src: url(fonts/Helvetica-Bold.ttf);
+  }
 input[type=text], input[type=password] {
     width: 100%;
     margin: 8px 0;
     display: block;
     border: none;
     box-sizing: border-box;
+    height: 40px;
 }
 .usernameblock {
     border-bottom: 1px solid #000;
-    padding-bottom: 20px;
     width: 100%;
     float: left;
 }
@@ -26,11 +33,13 @@ button {
   width: 100%;
   border-radius: 4px;
   font-size: 16px;
+  height: 60px;
+  font-family: HelveticaBold;
 }
 .loginformcontainer {
     width: 50%;
     max-width: 400px;
-    margin: 10% auto;
+    margin: 9% auto;
 }
 .pswblock {
     width: 100%;
@@ -72,7 +81,7 @@ span.symbol-input{
     display: block;
     color: #4caf50;
     right: 10px;
-    top: -12px;
+    top: -2px;
     font-size: 18px;
 }
 .inputblock .fa {
@@ -127,7 +136,7 @@ span.symbol-input{
     padding: 0;
 }
 .fliterOptions ul li {
-    width: 15%;
+    width: 18%;
     float: left;
 }
 .Icon .fa {
@@ -156,21 +165,32 @@ span.symbol-input{
     list-style: none;
 }
 .fliterOptions ul li {
-    width: 17%;
+    width: 18%;
     float: left;
     border-right: 1px solid #9e9e9e;
     padding-right: 15px;
     margin-right: 15px;
+}
+.rcs_slideCon .itemWrapper {
+    height: auto;
+}
+.rcs_slideCon .itemWrapper div {
+    height: auto;
+    width: 115px;
+}
+.rcs_sliderBox {
+    background: transparent !important;
+    height: 250px !important;
 }
 select::-ms-expand {
     display: none; /* Hide the default arrow in Internet Explorer 10 and Internet Explorer 11 */
 }
 .fliterOptions ul li:last-child {
     border-right: none;
-    width: 15%;
+    width: 23%;
 }
 .date {
-    padding: 9px 23px;
+    padding: 1px 23px;
 }
 .fliterOptions ul li:last-child {
     border-right: none;
@@ -223,8 +243,8 @@ select::-ms-expand {
     border-radius: 50%;
     padding-bottom: 7px;
     line-height: 1;
-    height: 24px;
-    margin-top: 6px;
+    height: 30px;
+    margin-top: 19px;
 }
 .numberRightBlock {
     float: right;
@@ -260,6 +280,7 @@ select::-ms-expand {
     opacity: 0.5;
     min-height: 40px;
     margin-top: 13px;
+    width:100% !important;
 }
 .sliderBlock .block .images {
     width: 70px;
@@ -302,6 +323,22 @@ select::-ms-expand {
     font-weight: bold;
     margin-bottom: 10px;
 }
+.react-tabs__tab--selected {
+    border: none;
+}
+.react-tabs__tab--selected {
+    background: #fff;
+    border: none;
+    color: #4caf50;
+    border-bottom: 2px solid #4caf50 !important;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+.react-tabs__tab{
+    font-weight: bold;
+}
+.react-tabs__tab-list {
+    border-bottom: 1px solid transparent; }
 .preSlider {
     width: 55px;
     float: left;
@@ -337,8 +374,25 @@ select::-ms-expand {
     border:1px solid #4caf50;
     color: #fff;
 }
-.slider  .title {
+.rcs_arrowBtn.rcs_next {
+    float: right;
+}
+.rcs_buttonSet {
+    top: 39% !important;
+    width: 100%;
+}
+.rcs_buttonWrapper {
+    float: left !important;
+    text-align: left !important;
+    width: 100%;
+}
+.slider .title {
     font-weight: bold;
+    width: 100% !important;
+    margin-bottom: 5px;
+}
+.rcs_buttonSet {
+    top: 39% !important;
 }
 .subtitle {
     font-size: 14px;
@@ -358,14 +412,14 @@ select::-ms-expand {
     margin-top: 15px;
 }
 .listBlock  .content {
-    width: 50%;
+    width: 54%;
     float: left;
     color: #000;
     opacity: 0.8;
     margin-top: 15px;
 }
 img.siteLogo {
-    width: 100px;
+    width: 200px;
     margin-bottom: 20px;
 }
 img.usernameImage {
@@ -408,7 +462,7 @@ footer {
     color: #4caf50;
 }
 .viewMore {
-    width: 19%;
+    width: 20%;
     float: left;
     margin-top: 24px;
     font-size: 15px;
