@@ -1,15 +1,16 @@
-body {
-    font-family: Helvetica, sans-serif;
-    margin: 0;
-}
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+/* @font-face {
     font-family: Helvetica;
     src: url(fonts/Helvetica.ttf);
   }
   @font-face {
     font-family: HelveticaBold;
     src: url(fonts/Helvetica-Bold.ttf);
-  }
+  } */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
 input[type=text], input[type=password] {
     width: 100%;
     margin: 8px 0;
@@ -401,7 +402,7 @@ select::-ms-expand {
     transform: scale(1.07);
     -webkit-transform: scale(1.07);
     background: #fff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0px 6px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0px 0px 12px 1px #dfdfdf;
     z-index: 9;
 }
 .viewMore {
@@ -439,7 +440,7 @@ select::-ms-expand {
 .slider .title {
     font-weight: bold;
     width: 100% !important;
-    margin-bottom: 5px;
+    margin-bottom: 12px;
 }
 .rcs_buttonSet {
     top: 39% !important;
@@ -475,12 +476,13 @@ select::-ms-expand {
     border-radius: 4px;
     margin-top: 15px;
 }
-.listBlock  .content {
+.listBlock .content {
     width: 54%;
     float: left;
     color: #000;
     opacity: 0.8;
-    margin-top: 15px;
+    margin-top: 10px;
+    padding: 0;
 }
 img.siteLogo {
     width: 200px;
@@ -503,21 +505,23 @@ input[type="text"]:focus, input[type=password]:focus {
     width: 41px;
 }
 footer {
-    padding: 20px 0px 10px 0px;
     width: 100%;
-    float: left;
+    position: fixed;
+    bottom: 10px;
+    background: #fff;
 }
 .listBlock .row {
     width: 100%;
     float: left;
     border-bottom: 1px solid #dfdfdf;
-    padding: 8px 0px;
+    padding: 12px 0px;
     margin: 0px;
 }
 .listBlock .img {
     width: 100px;
     float: left;
     padding-left: 20px;
+    text-align: center;
 }
 .listBlock .row:last-child {
     border-bottom: none;
@@ -554,9 +558,11 @@ footer {
     font-size: 15px;
     color: #4caf50;
     cursor: pointer;
+    padding: 0;
 }
 .listBlock .img img{
-    width: auto;
+    max-height: 58px;
+    padding: 12px 0 0 0;
 }
 .map {
     margin-top: 20px;
@@ -589,7 +595,11 @@ footer {
     width: 16.666%;
     float: left;
     padding: 11px 9px;
-    border-bottom: 3px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+}
+.popupClose{
+   margin-top: 10px;
+   cursor: pointer;
 }
 .mapBlock.block .title, .cellDataBlock.block .title, .staticBlock.block .title{
     font-size:24px;
@@ -599,8 +609,7 @@ footer {
 .popupBlockMain .popupHeader span {
     float: right;
     width: 42px;
-    margin-top: 12px;
-    font-weight: bold;
+    font-size: 30px;
 }
 .tabs { list-style: none; }
 .tabs li { display: inline; }
@@ -729,9 +738,10 @@ td.highrisk {
     z-index: 99999;
 }
 .popupBlockMain{
-    width: 800px;
+    width: 100%;
     margin: 0px auto;
     margin-top: 2%;
+    max-width: 1000px;
 }
 .rcs_arrowBtn.rcs_previous{
     background: transparent !important;
@@ -783,16 +793,21 @@ td.highrisk {
     padding: 20px 0px;
 }
 .popupHeader select {
-    height: 46px;
-    width: 28%;
-    margin-left: 20px;
-    border-color: #b9b7b7;
+    width: 30%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin: 0 5px;
 }
 .popupMainBlock {
     width: 100%;
     float: left;
     min-height: 480px;
     position: relative;
+        padding: 0 6px;
 }
 .betteryInformation {
     width: 78px;

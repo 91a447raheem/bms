@@ -135,7 +135,7 @@ const Dashboard = () => {
                             <div className="row">
                                 <div className="img"><img src={notificationBell} /></div>
                                 <div className="content">See all notification<br /> and others</div>
-                                <div className="viewMore"><a href="#">View All</a></div>
+                                <div className="viewMore">View All</div>
                             </div>
                         </div>
                     </div>

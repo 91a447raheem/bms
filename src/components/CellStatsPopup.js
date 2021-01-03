@@ -28,7 +28,9 @@ const CellStatsPopup = (props) => {
                             <option>Low</option>
                             <option>High Risk</option>
                         </select>
-                        <span onClick={closePopup}>X</span>
+                        <span className="popupClose" onClick={closePopup}><span class="material-icons">
+                            close
+</span></span>
                     </div>
                     <div className="popupMainBlock">
                         {loading ? <Loader /> : <div>

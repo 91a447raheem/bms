@@ -42,7 +42,9 @@ const CellDataPopup = (props) => {
                             <option>Low</option>
                             <option>High Risk</option>
                         </select>
-                        <span onClick={closePopup}>X</span>
+                        <span className="popupClose" onClick={closePopup}><span class="material-icons">
+                            close
+</span></span>
                     </div>
                     <div className="popupMainBlock">
                         {loading ? <Loader /> : <div>
@@ -57,7 +59,7 @@ const CellDataPopup = (props) => {
                             </div>
                             <div className="popupTable">
                                 {data && data.map((record, index) => {
-                                    return <div className="betteryBlock">
+                                    return <div className="betteryBlock" key={index}>
                                         <div className="betteryStatusImage">{temparatureStatus(record.tempStatus)}</div>
                                         <div className="betteryInformation">
                                             <div className="betteryname">{record.cellTitle}</div>
