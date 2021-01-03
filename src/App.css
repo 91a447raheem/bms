@@ -504,6 +504,208 @@ ul.tabs.group li{
 #box-one:target, #box-two:target, #box-three:target {
     z-index: 1;
   }
+  .popupTable {
+    width: 100%;
+  }
+  
+  .popupTable td, .popupTable th {
+    border-bottom: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .popupTable tr:nth-child(even){background-color: #f2f2f2;}
+  
+  .popupTable tr:hover {background-color: #ddd;}
+  
+  .popupTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #fff;
+    color: #000;
+    font-size: 14px;
+    opacity: 0.7;
+    padding: 18px 10px;
+  }
+  .popupTable td {
+    font-size: 14px;
+    color: #000;
+    opacity: 0.6;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+td.resolved {
+    color: #4caf50;
+    opacity: 1;
+}
+td.pending {
+    color: #ffa500;
+    opacity: 1;
+}
+td.medium {
+    color: #0089ff;
+    opacity: 1;
+}
+td.low {
+    color: #eaba9e;
+    opacity: 1;
+}
+td.highrisk {
+    color: #ff0000;
+    opacity: 1;
+}
+.popupTable tr.highRisk {
+    background-color: #fbd1d1;
+}
+  .popupBlockContainer {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(255,255,255,0.92);
+    z-index: 99999;
+}
+.popupBlockMain{
+    width: 800px;
+    margin: 0px auto;
+    margin-top: 10%;
+}
+
+.popupBlock {
+    width: 100%;
+    background: #fff;
+    float: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid #dfdfdf;
+}
+.popupHeader {
+    width: 100%;
+    float: left;
+    background: #eae9e9;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 20px 0px;
+}
+.popupHeader select {
+    height: 46px;
+    width: 28%;
+    margin-left: 20px;
+    border-color: #b9b7b7;
+}
+.popupMainBlock {
+    width: 100%;
+    float: left;
+}
+.betteryInformation {
+    width: 78px;
+    float: right;
+}
+.popupTable.noHeader table {
+    width: 100%;
+    margin: 0px;
+    border: none;
+}
+.popupTable.noHeader tr:nth-child(even), .popupTable.noHeader tr:nth-child(even):hover, .popupTable.noHeader tr:hover {
+    background-color: #fff;
+}
+.popupTable.noHeader td {
+    opacity: 1;
+}
+.betteryinfo {
+    font-size: 11px;
+    color: #000;
+    opacity: 0.7;
+}
+.betteryStatusImage {
+    width: 25px;
+    float: left;
+}
+.betteryStatusImage img {
+    width: 100%;
+}
+.sitePercentage {
+    float: right;
+    display: block;
+    color: #000;
+    right: 10px;
+    margin-top: 11px;
+    font-size: 16px;
+    padding-right: 10px;
+    width: 125px;
+    font-weight: bold;
+}
+.popupTitleBlock {
+    float: left;
+    display: block;
+    width: 100%;
+    padding: 15px 0px;
+}
+.popupTitleLeft {
+    float: left;
+    display: block;
+    padding-left: 10px;
+}
+.popupTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    opacity: 0.7;
+}
+.popupTable {
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+.popupTable table {
+    width: 97%;
+    margin: 0px 10px;
+    border-collapse: collapse;
+    border: 1px solid #dfdfdf;
+}
+
+.popupSubTitle {
+    font-size: 15px;
+    color: #000;
+    opacity: 0.5;
+}
+
+.meter {
+    height: 16px;
+    float: right;
+    position: relative;
+    background: #fff;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 4px;
+    padding: 0;
+    width: 80px;
+    box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
+    border: 1px solid #dfdfdf;
+}
+.arrows {
+    margin-top: 20px;
+    float: right;
+    padding-right: 20px;
+}
+span.preicon, span.nexticon {
+    padding-right: 10px;
+    color: #9a9999;
+    cursor: pointer;
+}
+.popupTable.noHeader {
+    margin-bottom: 20px;
+}
+.meter > span {
+    display: block;
+    height: 100%;
+    float: right;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: rgb(43,194,83);
+    position: relative;
+    overflow: hidden;
+}
 /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
   span.psw {

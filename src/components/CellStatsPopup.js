@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CellDataPopup = (props) => {
+const CellStatsPopup = (props) => {
     const { closePopup } = props
     return (
         <div className="popupBlockContainer">
@@ -137,4 +137,4 @@ const CellDataPopup = (props) => {
     );
 }
 
-export default CellDataPopup;
+export default CellStatsPopup;

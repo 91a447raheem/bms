@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {
     BatteryStatusIcon,
@@ -8,10 +8,24 @@ import {
     notificationBell,
     batteryCharging
 } from '../Assets'
+import CellDataPopup from './CellDataPopup'
+import CellStatsPopup from './CellStatsPopup'
 
 import { Header, Footer, SliderBlock, Filters, TabsList } from './Common'
 
 const Dashboard = () => {
+
+    const [cellData, setCellData] = useState(false)
+    const [cellStats, setCellStats] = useState(false)
+
+    const handleClickonData = () => {
+        setCellData(!cellData)
+    }
+
+    const handleClickonStats = () => {
+        setCellStats(!cellStats)
+    }
+
     return (<div>
         <div className="mainBlock">
             <Header />
@@ -102,12 +116,12 @@ const Dashboard = () => {
                             <div className="row">
                                 <div className="img"><img src={statisticsIcon} /></div>
                                 <div className="content">See all statistics <br />of Manufcaturing &amp; others</div>
-                                <div className="viewMore"><a href="#">View All</a></div>
+                                <div className="viewMore" onClick={handleClickonData}>View All</div>
                             </div>
                             <div className="row">
                                 <div className="img"><img src={technicalDetailsIcon} /></div>
                                 <div className="content">See all Technical<br />and Device details</div>
-                                <div className="viewMore"><a href="#">View All</a></div>
+                                <div className="viewMore" onClick={handleClickonStats}>View All</div>
                             </div>
                             <div className="row">
                                 <div className="img"><img src={notificationBell} /></div>
@@ -120,6 +134,8 @@ const Dashboard = () => {
             </div>
         </div>
         <Footer />
+        {cellData ? <CellDataPopup closePopup={handleClickonData} /> : null}
+        {cellStats ? <CellStatsPopup closePopup={handleClickonStats} /> : null}
     </div>
     );
 }

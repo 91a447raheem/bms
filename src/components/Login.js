@@ -4,12 +4,9 @@ import {
     UserNameIcon
 } from "../Assets";
 
-import CellDataPopup from './CellDataPopup'
-
 const Login = () => {
 
     return (<div className="container">
-        <CellDataPopup />
         <div className="loginformcontainer">
             <div className="imgcontainer">
                 <img src={IOT_icon} alt="Logo" className="siteLogo" />
