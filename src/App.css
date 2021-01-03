@@ -566,7 +566,9 @@ ul.tabs.group li{
     border-bottom: 1px solid #ddd;
     padding: 8px;
   }
-  
+  button:focus{
+      outline:none;
+  }
   .popupTable tr:nth-child(even){background-color: #f2f2f2;}
   
   .popupTable tr:hover {background-color: #ddd;}
@@ -621,7 +623,7 @@ td.highrisk {
 .popupBlockMain{
     width: 800px;
     margin: 0px auto;
-    margin-top: 10%;
+    margin-top: 13%;
 }
 
 .popupBlock {
@@ -647,6 +649,8 @@ td.highrisk {
 .popupMainBlock {
     width: 100%;
     float: left;
+        min-height: 480px;
+    position: relative;
 }
 .betteryInformation {
     width: 78px;
@@ -768,5 +772,43 @@ span.preicon, span.nexticon {
   }
   .cancelbtn {
      width: 100%;
+  }
+}
+
+.lds-ring {
+  display: inline-block;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #198754;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #198754 transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
