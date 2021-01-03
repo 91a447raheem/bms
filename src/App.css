@@ -107,10 +107,15 @@ span.symbol-input{
 }
 .userProfile {
     float: right;
-    padding: 10px;
+    padding: 7px 10px;
     background: #fff;
     color: #4caf50;
     border-radius: 50%;
+}
+.DayPickerInput input {
+    background: transparent;
+    border: none;
+    margin-top: 2px;
 }
 .notificationIcon {
     float: left;
@@ -148,12 +153,18 @@ span.symbol-input{
     width: 79%;
     border: none;
     background: transparent;
+    color:#717171;
 }
 .fliterOptions ul li:nth-child(2) select {
     width: 100%;
 }
 .calendarIcon {
     float: right;
+    margin-top: 3px;
+}
+.DayPickerInput {
+    display: inline-block;
+    width: 100px;
 }
 .Icon {
     float: left;
@@ -190,7 +201,8 @@ select::-ms-expand {
     width: 23%;
 }
 .date {
-    padding: 1px 23px;
+    padding: 1px 0px 2px 23px;
+    width: 153px;
 }
 .fliterOptions ul li:last-child {
     border-right: none;
@@ -205,8 +217,8 @@ select::-ms-expand {
 }
 .locationname {
     font-weight: bold;
-    margin-bottom: 5px;
-    font-size: 18px;
+    margin-bottom: 0px;
+    font-size: 16px;
 }
 .siteStatus {
     font-size: 16px;
@@ -215,6 +227,12 @@ select::-ms-expand {
     padding: 0;
     width: 100%;
     display: inline-flex;
+    margin-top: 10px;
+    margin-bottom: 17px;
+}
+.siteStatus {
+    font-size: 14px;
+    color: #717171;
 }
 .countBlock ul li:first-child {
     width: 300px;
@@ -228,10 +246,13 @@ select::-ms-expand {
     color: #000;
     font-weight: bold;
     left: 0;
-    top: 9px;
-    font-size: 26px;
+    top: 0px;
+    font-size: 34px;
     text-align: center;
     align-content: center;
+}
+.tabbed-area .number {
+    top: 9px;
 }
 .extraIcon {
     color: #fff;
@@ -244,24 +265,39 @@ select::-ms-expand {
     padding-bottom: 7px;
     line-height: 1;
     height: 30px;
-    margin-top: 19px;
+    margin-top: 12px;
+    cursor: pointer;
+}
+.DayPickerInput input:focus {
+    outline: none;
 }
 .numberRightBlock {
     float: right;
     display: block;
     border: none;
     box-sizing: border-box;
-    width: 70%; 
+    width: 70%;
     margin-top: 7px;
+}
+.tabbed-area .numberRightBlock {
+    float: right;
+    display: block;
+    border: none;
+    box-sizing: border-box;
+    width: 58%;
+    margin-top: 7px;
+    text-align: left !important;
 }
 .title {
     font-size: 15px;
     color: #000;
 }
+.numberRightBlock .title {
+    text-align: left !important;
+}
 .sitesSubtitle {
     font-size: 13px;
-    color: #000;
-    opacity: 0.5;
+    color: #717171;
 }
 .countBlock {
     width: 100%;
@@ -329,13 +365,19 @@ select::-ms-expand {
 .react-tabs__tab--selected {
     background: #fff;
     border: none;
-    color: #4caf50;
+    color: #4caf50 !important;
     border-bottom: 2px solid #4caf50 !important;
     font-weight: bold;
     border-radius: 5px 5px 0 0;
 }
-.react-tabs__tab{
-    font-weight: bold;
+.react-tabs__tab {
+    width: 33.33%;
+    text-align: center;
+    color: #717171;
+}
+.tabbed-area {
+    width: 85%;
+    margin: 0px auto;
 }
 .react-tabs__tab-list {
     border-bottom: 1px solid transparent; }
@@ -481,6 +523,10 @@ footer {
     float: left;
     width: 32.33%;
 }
+.tabbed-area .block {
+    width: 60%;
+    margin: 0px auto;
+}
 .cellDataBlock.block {
     margin: 0px 1.5%;
 }
@@ -544,7 +590,7 @@ ul.tabs.group li{
 }
 .borderImage {
     text-align: center;
-    width: 100px;
+    width: 121px;
     border: 1px solid #4caf50;
     border-radius: 50%;
     padding: 14px;
