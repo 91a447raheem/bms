@@ -25,7 +25,7 @@ const SliderBlock = () => {
 
     return (
         <div className="slider">
-            <CarouselSlider slideCpnts={items} accEle={{ dots: false }} />
+            <CarouselSlider slideCpnts={items} accEle={{ dots: false }} sliderBoxStyle={{ width: '100%' }} itemsStyle={{ margin: '0px 5px', minWidth: 200 }} buttonSetting={{ placeOn: 'middle-outside' }} lBtnCpnt={<span className="navLeftIcon"><img width={30} src={BatteryStatusIcon} /></span>} rBtnCpnt={<span className="navRightIcon"><img width={30} src={BatteryStatusIcon} /></span>} />
         </div>
     );
 }

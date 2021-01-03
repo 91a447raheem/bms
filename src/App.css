@@ -184,10 +184,11 @@ span.symbol-input{
 }
 .rcs_slideCon .itemWrapper {
     height: auto;
+        cursor: pointer;
 }
 .rcs_slideCon .itemWrapper div {
     height: auto;
-    width: 115px;
+    width: 200px;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     -webkit-transition-duration: 0.3s;
@@ -448,9 +449,22 @@ select::-ms-expand {
     opacity: 0.5;
 }
 .slider {
-    max-width: 100%;
-    width: 95%;
+width: 100%;
     margin: 0px auto;
+}
+.rcs_sliderSet{
+        width: 100%;
+    position: relative;
+}
+.rcs_left {
+    position: absolute;
+    left: -60px;
+    width: auto;
+}
+.rcs_right {
+    position: absolute;
+    right: -60px;
+    width: auto;
 }
 .listBlock {
     width: 100%;
@@ -703,6 +717,7 @@ td.highrisk {
     z-index: 900000;
     color: #000 !important;
     position: absolute;
+    /* left: -60px; */
 }
 .rcs_arrowBtn.rcs_previous:hover, .rcs_arrowBtn.rcs_next:hover{
     background:#4caf50 !important;
@@ -719,6 +734,10 @@ td.highrisk {
     z-index: 900000;
     color: #000 !important;
     position: relative;
+    /* right: -60px; */
+}
+.rcs_buttonSet .rcs_buttonWrapper{
+    opacity: 1 !important;
 }
 .rcs_buttonWrapper, .rcs_buttonSet{
     z-index: unset !important;
@@ -746,7 +765,7 @@ td.highrisk {
 .popupMainBlock {
     width: 100%;
     float: left;
-        min-height: 480px;
+    min-height: 480px;
     position: relative;
 }
 .betteryInformation {
