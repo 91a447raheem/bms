@@ -5,6 +5,20 @@ const CellDataPopup = (props) => {
     const { closePopup, dataResponse, loading } = props
     const { data, location, percentage } = dataResponse
 
+    const temparatureStatus = (tempStat) => {
+        let tempIcon = temparatureIcon
+
+        if (tempStat == "hightemp") {
+            tempIcon = temparatureIcon
+        } else if (tempStat == "lowvoltage") {
+            tempIcon = temparatureIcon
+        } else if (tempStat == "discharge") {
+            tempIcon = temparatureIcon
+        }
+
+        return <img src={tempIcon} />
+    }
+
     return (
         <div className="popupBlockContainer">
             <div className="popupBlockMain">
@@ -44,10 +58,10 @@ const CellDataPopup = (props) => {
                             <div className="popupTable">
                                 {data && data.map((record, index) => {
                                     return <div className="betteryBlock">
-                                        <div className="betteryStatusImage"><img src={temparatureIcon} /></div>
+                                        <div className="betteryStatusImage">{temparatureStatus(record.tempStatus)}</div>
                                         <div className="betteryInformation">
-                                            <div className="betteryname">Cell 1-<br /> Charging</div>
-                                            <div className="betteryinfo">2.063 V - 24<sup>0</sup>C</div>
+                                            <div className="betteryname">{record.cellTitle}</div>
+                                            <div className="betteryinfo">{record.batteryInfo}<sup>0</sup>C</div>
                                         </div>
                                     </div>
                                 })}
