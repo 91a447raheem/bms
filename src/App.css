@@ -35,7 +35,7 @@ button {
   border-radius: 4px;
   font-size: 16px;
   height: 60px;
-  font-family: HelveticaBold;
+  font-weight: bold;
 }
 .loginformcontainer {
     width: 50%;
