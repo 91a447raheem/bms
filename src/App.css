@@ -16,10 +16,10 @@ input[type=text], input[type=password] {
     display: block;
     border: none;
     box-sizing: border-box;
+    height: 40px;
 }
 .usernameblock {
     border-bottom: 1px solid #000;
-    padding-bottom: 20px;
     width: 100%;
     float: left;
 }
@@ -33,11 +33,13 @@ button {
   width: 100%;
   border-radius: 4px;
   font-size: 16px;
+  height: 60px;
+  font-family: HelveticaBold;
 }
 .loginformcontainer {
     width: 50%;
     max-width: 400px;
-    margin: 10% auto;
+    margin: 9% auto;
 }
 .pswblock {
     width: 100%;
@@ -79,7 +81,7 @@ span.symbol-input{
     display: block;
     color: #4caf50;
     right: 10px;
-    top: -12px;
+    top: -2px;
     font-size: 18px;
 }
 .inputblock .fa {
@@ -417,7 +419,7 @@ select::-ms-expand {
     margin-top: 15px;
 }
 img.siteLogo {
-    width: 100px;
+    width: 200px;
     margin-bottom: 20px;
 }
 img.usernameImage {
