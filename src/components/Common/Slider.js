@@ -1,52 +1,46 @@
 import React from 'react';
 import {
-    BatteryStatusIcon,
-    voltageIcon,
-    stringContnentIcon,
-    communicationIcon,
-    normalstatusIcon,
-    communicationactiveIcon,
-    temparatureIcon
+    BatteryStatusIcon
 } from '../../Assets'
 import CarouselSlider from 'react-carousel-slider';
 
 const SliderBlock = () => {
 
-    const itemList =  [{
-        "title":"Cell Voltage (24)",
-        "image":voltageIcon,
-        "subtitle":"normal"
-        },
-        {
-        "title":"String Current",
-        "image":stringContnentIcon,
-        "subtitle":"8 Of 15 Normal"
-        },
-        {
-            "title":"State of change",
-            "image":communicationIcon,
-            "subtitle":"Communicating"
-        },
-        {
-            "title":"Battery Status",
-            "image":BatteryStatusIcon,
-            "subtitle":"15 of Betteries are Charging"
-        },
-        {
-            "title":"String Voltage",
-            "image":normalstatusIcon,
-            "subtitle":"normal"
-        },
-        {
-            "title":"Communication Status",
-            "image":communicationactiveIcon,
-            "subtitle":"Communicating"
-        },
-        {
-            "title":"Amblent Temparature",
-            "image":temparatureIcon,
-            "subtitle":"normal"
-        }
+    const itemList = [{
+        "title": "Cell Voltage (24)",
+        "image": BatteryStatusIcon,
+        "subtitle": "normal"
+    },
+    {
+        "title": "String Current",
+        "image": BatteryStatusIcon,
+        "subtitle": "8 Of 15 Normal"
+    },
+    {
+        "title": "State of change",
+        "image": BatteryStatusIcon,
+        "subtitle": "Communicating"
+    },
+    {
+        "title": "Battery Status",
+        "image": BatteryStatusIcon,
+        "subtitle": "15 of Betteries are Charging"
+    },
+    {
+        "title": "String Voltage",
+        "image": BatteryStatusIcon,
+        "subtitle": "normal"
+    },
+    {
+        "title": "Communication Status",
+        "image": BatteryStatusIcon,
+        "subtitle": "Communicating"
+    },
+    {
+        "title": "Amblent Temparature",
+        "image": BatteryStatusIcon,
+        "subtitle": "normal"
+    }
     ]
 
     const handleClick = () => {
@@ -56,7 +50,7 @@ const SliderBlock = () => {
     let items = itemList.map((item, index) => {
         return (<div className="block" onClick={handleClick}>
             <div className="title">{item.title}</div>
-            <div className="images"><img src={item.image} /></div>
+            <div className="images"><img height={70} src={item.image} /></div>
             <div className="subtitle">{item.subtitle}</div>
         </div>)
     }
@@ -66,7 +60,7 @@ const SliderBlock = () => {
 
     return (
         <div className="slider">
-            <CarouselSlider slideCpnts={items} accEle={{ dots: false }} sliderBoxStyle={{ width: '100%' }} itemsStyle={{ margin: '0px 5px', minWidth: 200 }} buttonSetting={{ placeOn: 'middle-outside' }} lBtnCpnt={<span class="material-icons">navigate_before</span>} rBtnCpnt={<span class="material-icons">navigate_next</span>} />
+            <CarouselSlider slideCpnts={items} accEle={{ dots: false }} sliderBoxStyle={{ width: '100%' }} itemsStyle={{ margin: '0px 5px', minWidth: "200px" }} buttonSetting={{ placeOn: 'middle-outside' }} lBtnCpnt={<span class="material-icons">navigate_before</span>} rBtnCpnt={<span class="material-icons">navigate_next</span>} />
         </div>
     );
 }
