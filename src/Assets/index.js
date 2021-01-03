@@ -8,6 +8,12 @@ import technicalDetailsIcon from './technical-details-icon.png'
 import notificationBell from './notification-bell.png'
 import batteryCharging from './charging-battery.png'
 import temparatureIcon from './temparature.png'
+import voltageIcon from './voltage.png'
+import stringContnentIcon from './string-Contnent.png'
+import communicationIcon from './communication.png'
+import normalstatusIcon from './normal-status.png'
+import communicationactiveIcon from './communication-active.png'
+import temparatureIcon from './temparature.png'
 export {
     IOT_icon,
     Login,
@@ -18,5 +24,11 @@ export {
     technicalDetailsIcon,
     notificationBell,
     batteryCharging,
-    temparatureIcon
+    temparatureIcon,
+    voltageIcon,
+    stringContnentIcon,
+    normalstatusIcon,
+    communicationactiveIcon,
+    temparatureIcon,
+    communicationIcon
 }

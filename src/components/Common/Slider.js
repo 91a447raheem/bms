@@ -1,12 +1,53 @@
 import React from 'react';
 import {
-    BatteryStatusIcon
+    BatteryStatusIcon,
+    voltageIcon,
+    stringContnentIcon,
+    communicationIcon,
+    normalstatusIcon,
+    communicationactiveIcon,
+    temparatureIcon
 } from '../../Assets'
 import CarouselSlider from 'react-carousel-slider';
 
 const SliderBlock = () => {
 
-    const itemList = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    const itemList =  [{
+        "title":"Cell Voltage (24)",
+        "image":voltageIcon,
+        "subtitle":"normal"
+        },
+        {
+        "title":"String Current",
+        "image":stringContnentIcon,
+        "subtitle":"8 Of 15 Normal"
+        },
+        {
+            "title":"State of change",
+            "image":communicationIcon,
+            "subtitle":"Communicating"
+        },
+        {
+            "title":"Battery Status",
+            "image":BatteryStatusIcon,
+            "subtitle":"15 of Betteries are Charging"
+        },
+        {
+            "title":"String Voltage",
+            "image":normalstatusIcon,
+            "subtitle":"normal"
+        },
+        {
+            "title":"Communication Status",
+            "image":communicationactiveIcon,
+            "subtitle":"Communicating"
+        },
+        {
+            "title":"Amblent Temparature",
+            "image":temparatureIcon,
+            "subtitle":"normal"
+        }
+    ]
 
     const handleClick = () => {
         alert("Clicked in Mid Slider")
@@ -14,9 +55,9 @@ const SliderBlock = () => {
 
     let items = itemList.map((item, index) => {
         return (<div className="block" onClick={handleClick}>
-            <div className="title">Cell <br></br>Voltage (24)</div>
-            <div className="images"><img src={BatteryStatusIcon} /></div>
-            <div className="subtitle">normal</div>
+            <div className="title">{item.title}</div>
+            <div className="images"><img src={item.image} /></div>
+            <div className="subtitle">{item.subtitle}</div>
         </div>)
     }
     );
@@ -25,7 +66,7 @@ const SliderBlock = () => {
 
     return (
         <div className="slider">
-            <CarouselSlider slideCpnts={items} accEle={{ dots: false }} sliderBoxStyle={{ width: '100%' }} itemsStyle={{ margin: '0px 5px', minWidth: 200 }} buttonSetting={{ placeOn: 'middle-outside' }} lBtnCpnt={<span className="navLeftIcon"><img width={30} src={BatteryStatusIcon} /></span>} rBtnCpnt={<span className="navRightIcon"><img width={30} src={BatteryStatusIcon} /></span>} />
+            <CarouselSlider slideCpnts={items} accEle={{ dots: false }} sliderBoxStyle={{ width: '100%' }} itemsStyle={{ margin: '0px 5px', minWidth: 200 }} buttonSetting={{ placeOn: 'middle-outside' }} lBtnCpnt={<span class="material-icons">navigate_before</span>} rBtnCpnt={<span class="material-icons">navigate_next</span>} />
         </div>
     );
 }

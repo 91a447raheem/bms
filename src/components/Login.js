@@ -47,7 +47,7 @@ const Login = () => {
                 <div className="inputblock">
                     <input type="password" value={password} placeholder="**********" onChange={(e) => handleChange(e, "pass")} />
                     <span className="symbol-input">
-                        <i className="fa fa-lock" aria-hidden="true" />
+                    <i class="material-icons">lock</i>
                     </span>
                 </div>
             </div>
