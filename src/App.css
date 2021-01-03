@@ -188,6 +188,12 @@ span.symbol-input{
 .rcs_slideCon .itemWrapper div {
     height: auto;
     width: 115px;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
 }
 .rcs_sliderBox {
     background: transparent !important;
@@ -535,7 +541,7 @@ footer {
     text-align: center;
 }
 .mapBlock.block .title, .cellDataBlock.block .title, .staticBlock.block .title{
-    font-size:18px;
+    font-size:24px;
     font-weight: bold;
     margin-bottom:5px;
 }
@@ -669,9 +675,38 @@ td.highrisk {
 .popupBlockMain{
     width: 800px;
     margin: 0px auto;
-    margin-top: 13%;
+    margin-top: 2%;
 }
-
+.rcs_arrowBtn.rcs_previous{
+    background: transparent !important;
+    border: 3px solid #9a9a9a !important;
+    opacity: 1;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 900000;
+    color: #000 !important;
+    position: absolute;
+}
+.rcs_arrowBtn.rcs_previous:hover, .rcs_arrowBtn.rcs_next:hover{
+    background:#4caf50 !important;
+    border: 3px solid #4caf50 !important;
+    color: #fff !important;
+}
+.rcs_arrowBtn.rcs_next{
+    background: transparent !important;
+    border: 3px solid #9a9a9a !important;
+    opacity: 1;
+    border-radius: 50% !important;
+    width: 40px !important;
+    height: 40px !important;
+    z-index: 900000;
+    color: #000 !important;
+    position: relative;
+}
+.rcs_buttonWrapper, .rcs_buttonSet{
+    z-index: unset !important;
+}
 .popupBlock {
     width: 100%;
     background: #fff;
