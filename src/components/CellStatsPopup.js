@@ -54,7 +54,7 @@ const CellStatsPopup = (props) => {
                                         <th>Action</th>
                                     </tr>
                                         {data && data.map((record, index) => {
-                                            return <tr key={index}>
+                                            return <tr key={index} className={returnActioncls(record.action)}>
                                                 <td>{index}</td>
                                                 <td>{record.cellId}</td>
                                                 <td>{record.batteryStatus}</td>
