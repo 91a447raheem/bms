@@ -1,0 +1,114 @@
+{
+    "location": "Madhapur",
+    "percentage": 80,
+    "data": [
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Resolved"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Pending"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Resolved"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Resolved"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Resolved"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Resolved"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Medium"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Resolved"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Resolved"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "High Risk"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Resolved"
+        },
+        {
+            "cellId": "VA123456",
+            "batteryStatus": "15% Charge",
+            "voltage": "2.49V",
+            "centegrade": 22,
+            "temparature": 220,
+            "presentCondition": "Normal",
+            "action": "Medium"
+        }
+    ]
+}

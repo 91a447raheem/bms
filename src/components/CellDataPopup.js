@@ -1,7 +1,10 @@
 import React from 'react';
 import { Loader } from './Common'
+import { returnActioncls } from '../utils'
 const CellDataPopup = (props) => {
-    const { closePopup, loading } = props
+    const { closePopup, dataResponse, loading } = props
+    const { data, location, percentage } = dataResponse
+
     return (
         <div className="popupBlockContainer">
             <div className="popupBlockMain">
@@ -31,11 +34,11 @@ const CellDataPopup = (props) => {
                         {loading ? <Loader /> : <div>
                             <div className="popupTitleBlock">
                                 <div className="popupTitleLeft">
-                                    <div className="popupTitle">Cell Data-Madhapur</div>
+                                    <div className="popupTitle">Cell Data-{location}</div>
                                     <div className="popupSubTitle">complete analytics detailed reports of Cell data</div>
                                 </div>
-                                <div className="sitePercentage">80%<div className="meter">
-                                    <span style={{ width: '80%' }} />
+                                <div className="sitePercentage">{percentage}%<div className="meter">
+                                    <span style={{ width: `${percentage}%` }} />
                                 </div></div>
                             </div>
                             <div className="popupTable">
@@ -50,86 +53,20 @@ const CellDataPopup = (props) => {
                                         <th>Present Condition</th>
                                         <th>Action</th>
                                     </tr>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>VA123456</td>
-                                            <td>15% Charge</td>
-                                            <td>2.49V</td>
-                                            <td>22<sup>0</sup></td>
-                                            <td>220<sup>0</sup></td>
-                                            <td>Normal</td>
-                                            <td className="resolved">Resolved</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>VA123456</td>
-                                            <td>15% Charge</td>
-                                            <td>2.49V</td>
-                                            <td>22<sup>0</sup></td>
-                                            <td>220<sup>0</sup></td>
-                                            <td>Medium</td>
-                                            <td className="pending">Pending</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>VA123456</td>
-                                            <td>15% Charge</td>
-                                            <td>2.49V</td>
-                                            <td>22<sup>0</sup></td>
-                                            <td>220<sup>0</sup></td>
-                                            <td>Coummnicating</td>
-                                            <td className="resolved">Resolved</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>VA123456</td>
-                                            <td>15% Charge</td>
-                                            <td>2.49V</td>
-                                            <td>22<sup>0</sup></td>
-                                            <td>220<sup>0</sup></td>
-                                            <td>Charging</td>
-                                            <td className="resolved">Resolved</td>
-                                        </tr>
-                                        <tr className="highRisk">
-                                            <td>5</td>
-                                            <td>VA123456</td>
-                                            <td>15% Charge</td>
-                                            <td>2.49V</td>
-                                            <td>22<sup>0</sup></td>
-                                            <td>220<sup>0</sup></td>
-                                            <td>Charging</td>
-                                            <td className="highrisk">High Risk</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>VA123456</td>
-                                            <td>15% Charge</td>
-                                            <td>2.49V</td>
-                                            <td>22<sup>0</sup></td>
-                                            <td>220<sup>0</sup></td>
-                                            <td>Normal</td>
-                                            <td className="medium">Medium</td>
-                                        </tr>
-                                        <tr><td>7</td>
-                                            <td>VA123456</td>
-                                            <td>15% Charge</td>
-                                            <td>2.49V</td>
-                                            <td>22<sup>0</sup></td>
-                                            <td>220<sup>0</sup></td>
-                                            <td>Normal</td>
-                                            <td className="resolved">Resolved</td>
-                                        </tr>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>VA123456</td>
-                                            <td>15% Charge</td>
-                                            <td>2.49V</td>
-                                            <td>22<sup>0</sup></td>
-                                            <td>220<sup>0</sup></td>
-                                            <td>Normal</td>
-                                            <td className="low">Low</td>
-                                        </tr>
-                                    </tbody></table>
+                                        {data && data.map((record, index) => {
+                                            return <tr key={index}>
+                                                <td>{index}</td>
+                                                <td>{record.cellId}</td>
+                                                <td>{record.batteryStatus}</td>
+                                                <td>{record.voltage}</td>
+                                                <td>{record.centegrade}<sup>0</sup></td>
+                                                <td>{record.temparature}<sup>0</sup></td>
+                                                <td>{record.presentCondition}</td>
+                                                <td className={returnActioncls(record.action)}>{record.action}</td>
+                                            </tr>
+                                        })}
+                                    </tbody>
+                                </table>
                             </div>
                         </div>}
                     </div>

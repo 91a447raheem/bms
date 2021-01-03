@@ -12,22 +12,26 @@ import CellDataPopup from './CellDataPopup'
 import CellStatsPopup from './CellStatsPopup'
 
 import { Header, Footer, SliderBlock, Filters, TabsList } from './Common'
+import { CellDataJson, CellStatsJson } from '../jsons'
 
 const Dashboard = () => {
 
     const [cellData, setCellData] = useState(false)
     const [cellStats, setCellStats] = useState(false)
     const [loading, setLoading] = useState(false)
+    const [data, setData] = useState([])
 
     const handleClickonData = () => {
         // Once after service call we need to fetch the stop the loader
-        // setLoading(true)
+        setLoading(false)
+        setData(CellDataJson)
         setCellData(!cellData)
     }
 
     const handleClickonStats = () => {
         // Once after service call we need to fetch the stop the loader
-        // setLoading(true)
+        setLoading(false)
+        setData(CellStatsJson)
         setCellStats(!cellStats)
     }
 
@@ -139,8 +143,8 @@ const Dashboard = () => {
             </div>
         </div>
         <Footer />
-        {cellData ? <CellDataPopup closePopup={handleClickonData} loading={loading} /> : null}
-        {cellStats ? <CellStatsPopup closePopup={handleClickonStats} loading={loading} /> : null}
+        {cellData ? <CellDataPopup dataResponse={data} closePopup={handleClickonData} loading={loading} /> : null}
+        {cellStats ? <CellStatsPopup dataResponse={data} closePopup={handleClickonStats} loading={loading} /> : null}
     </div>
     );
 }
