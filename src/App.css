@@ -18,6 +18,7 @@ input[type=text], input[type=password] {
     border: none;
     box-sizing: border-box;
     height: 40px;
+    background: transparent;
 }
 .usernameblock {
     border-bottom: 1px solid #000;
@@ -40,7 +41,7 @@ button {
 .loginformcontainer {
     width: 50%;
     max-width: 400px;
-    margin: 9% auto;
+    margin: 8% auto;
 }
 .pswblock {
     width: 100%;
@@ -599,7 +600,7 @@ footer {
     margin: 0px auto;
 }
 .cellDataBlock.block {
-    margin: 0px 1.5%;
+    margin: 0px;
 }
 #box-four:target a[href="#box-four"] { color: red; }
 .mapBlock.block .title, .cellDataBlock.block .title, .staticBlock.block .title, .mapBlock.block .subtitle, .cellDataBlock.block .subtitle, .staticBlock.block .subtitle{

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import {
     IOT_icon,
-    UserNameIcon
+    UserNameIcon,
+    screenBg
 } from "../Assets";
 
 const Login = () => {
@@ -28,7 +29,7 @@ const Login = () => {
 
     }
 
-    return (<div className="container">
+    return (<div style={{backgroundImage:"url("+screenBg+")", backgroundRepeat:'round',float:"left",width:'100%'}}>
         <div className="loginformcontainer">
             <div className="imgcontainer">
                 <img src={IOT_icon} alt="Logo" className="siteLogo" />

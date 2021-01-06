@@ -13,6 +13,7 @@ import stringContnentIcon from './string-Contnent.png'
 import communicationIcon from './communication.png'
 import normalstatusIcon from './normal-status.png'
 import communicationactiveIcon from './communication-active.png'
+import screenBg from './screen-bg.png'
 export {
     IOT_icon,
     Login,
@@ -28,5 +29,6 @@ export {
     stringContnentIcon,
     normalstatusIcon,
     communicationactiveIcon,
-    communicationIcon
+    communicationIcon,
+    screenBg
 }
