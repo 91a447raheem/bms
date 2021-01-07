@@ -989,3 +989,60 @@ span.preicon, span.nexticon {
     transform: rotate(360deg);
   }
 }
+.dPzsDe, .clcBSf{
+    top: 38%;
+    background: transparent !important;
+    border: 2px solid #dfdfdf;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+.clcBSf:hover, .clcBSf:active, .dPzsDe:hover,.dPzsDe:active{
+    background: #4caf50 !important;
+    border: 2px solid #4caf50;
+    color:#fff;
+}
+.clcBSf{
+    right: -43px;
+}
+.dPzsDe{
+left: -42px;
+}
+@media only screen and (max-width: 1200px) {
+    .fliterOptions ul li {
+        width: 22%;
+  }
+  .countBlock ul li {
+    width: 260px;
+    }
+    .number {
+        font-size: 24px;
+    }
+    .numberRightBlock .title{
+        font-size: 13px;
+    }
+    .numberRightBlock{
+        margin-top: 0px;
+    }
+    .extraIcon{
+        margin-top: 4px;
+    }
+    .map iframe {
+        width: 100%;
+    }
+    .tabbed-area .numberRightBlock {
+        width: 67%;
+    }
+    .tabbed-area .block {
+        width: 85%;
+        margin: 0px auto;
+    }
+    .listBlock .content {
+        width: 46%;
+        font-size: 14px;
+    }
+    .viewMore {
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
