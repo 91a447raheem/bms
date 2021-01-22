@@ -1046,3 +1046,110 @@ left: -42px;
         font-size: 14px;
     }
 }
+
+@media only screen and (max-width: 1024px) { 
+    .container {
+        padding: 0;
+        width: 90%;
+        margin: 0px auto;
+    }
+    .fliterOptions ul li {
+        width: 25%;
+    }
+    .listBlock .content {
+        width: 45%;
+        font-size: 14px;
+    }
+    .map iframe {
+        width: 100%;
+        height: 265px;
+    }
+    .SingleSlide .title {
+        min-height: 45px;
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    .mapBlock.block, .cellDataBlock.block, .staticBlock.block {
+        float: left;
+        width: 100%;
+    }
+    .container {
+        padding: 0;
+        width: 90%;
+        margin: 0px auto;
+        max-width: 100%;
+    }
+    .viewMore {
+        margin-top: 20px;
+        font-size: 14px;
+        width: 70px;
+        float: right;
+        text-align: right;
+    }
+    .countBlock ul li:nth-child(6){
+        width: 175px;
+    }
+    .map iframe {
+        width: 100%;
+        height: 300px;
+    }
+    .staticBlock.block {
+        margin-top: 25px;
+        margin-bottom: 50px;
+    }
+    .fliterOptions ul li {
+        width: 35%;
+    }
+    .number {
+        font-size: 15px;
+    }
+    .countBlock ul li:first-child {
+        width: 200px;
+    }
+    .tabbed-area .block {
+        width: 200px;
+        margin: 0px auto;
+    }
+    .listBlock .content {
+        width: 69%;
+        font-size: 14px;
+    }
+    .listBlock .content br {
+        display: none;
+    }
+    .sliderBlock .container {
+        width: 84%;
+    }
+    .SingleSlide {
+        height: 220px;
+        padding: 10px 0;
+    }
+    .countBlock ul li {
+        width: 30%;
+        float: left;
+        height: 63px;
+    }
+    .countBlock ul {
+        display: block;
+    }
+    .countBlock ul li:first-child {
+        width: 30%;
+    }
+}
+
+@media only screen and (max-width: 684px) {  
+    .countBlock ul li:nth-child(6) {
+        width: 172px;
+    }
+    .fliterOptions ul li:last-child {
+        border-right: none;
+        width: 20%;
+    }
+    .fliterOptions ul li {
+        width: 36%;
+    }
+    .fliterOptions ul li:nth-child(2) {
+        width: 29%;
+    }
+}
