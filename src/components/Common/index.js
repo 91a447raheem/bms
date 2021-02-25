@@ -5,6 +5,7 @@ import Filters from './Filters'
 import TabsList from './TabsList'
 import GoogleMap from './GoogleMap'
 import Loader from './Loader'
+import ExportToExcel from './ExportToExcel'
 export {
     Footer,
     Header,
@@ -12,5 +13,5 @@ export {
     Filters,
     TabsList,
     GoogleMap,
-    Loader
+    Loader,ExportToExcel
 }

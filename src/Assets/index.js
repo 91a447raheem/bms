@@ -14,6 +14,10 @@ import communicationIcon from './communication.png'
 import normalstatusIcon from './normal-status.png'
 import communicationactiveIcon from './communication-active.png'
 import screenBg from './screen-bg.png'
+import loginBg from './background_img.jpg'
+import dashboardBg from './dashboard_bg_img.jpg';
+import dashboard_bg from './new_bg6.png'
+
 export {
     IOT_icon,
     Login,
@@ -30,5 +34,8 @@ export {
     normalstatusIcon,
     communicationactiveIcon,
     communicationIcon,
-    screenBg
+    screenBg,
+    loginBg,
+    dashboardBg,
+    dashboard_bg
 }
