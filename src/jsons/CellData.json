@@ -1,0 +1,593 @@
+{
+    "data": {
+        "getDashboard": [
+            {
+                "title": "String Info",
+                "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+                "iconName": "voltage",
+                "footer": "Normal",
+                "data": [
+                    {
+                        "title": "String Voltage",
+                        "value": "026 V",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Current",
+                        "value": "0.7 A",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "State Of Charge(SOC)",
+                        "value": "100%",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Depth Of Discharge(DOD)",
+                        "value": "0",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Ambient Temperature",
+                        "value": "0 C",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Peak Charge Current",
+                        "value": "68.2 A",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Average Charge Current",
+                        "value": "2.5582 A",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Ampere HourIn",
+                        "value": "2.6506 Ah",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Charge Time",
+                        "value": "01:02:10",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Peak Discharge Current",
+                        "value": "1.4 A",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Average Discharge Current",
+                        "value": "1.4 A",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Ampere HourOut",
+                        "value": "0.0117 Ah",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Discharge Time",
+                        "value": "00:00:30",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    }
+                ]
+            },
+            {
+                "title": "Battery Status",
+                "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+                "iconName": "voltage",
+                "footer": "7 Discharging",
+                "data": [
+                    {
+                        "title": "Charging",
+                        "value": "12",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Discharging",
+                        "value": "5",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    }
+                ]
+            },
+            {
+                "title": "Cell Status",
+                "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+                "iconName": "voltage",
+                "footer": "3 H.V, 2 H.T",
+                "data": [
+                    {
+                        "title": "Charging",
+                        "value": "12",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Discharging",
+                        "value": "5",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "High Voltage",
+                        "value": "9",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "High Temprature",
+                        "value": "10",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Low Voltage",
+                        "value": "10",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "About To Die",
+                        "value": "10",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Open Battery",
+                        "value": "10",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Common Fail",
+                        "value": "10",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    }
+                ]
+            },
+            {
+                "title": "Cell Info",
+                "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+                "iconName": "voltage",
+                "footer": "3 H.V, 2 H.T",
+                "data": [
+                    {
+                        "title": "Total Cells",
+                        "value": "10",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Problem Cells",
+                        "value": "5",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Communicating",
+                        "value": "10",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Not Communicating",
+                        "value": "10",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    }
+                ]
+            },
+            {
+                "title": "General Info",
+                "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+                "iconName": "voltage",
+                "footer": "Normal",
+                "data": [
+                    {
+                        "title": "Charge-Discharge Cycles",
+                        "value": "112",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Ampere HourIn",
+                        "value": "68353.02 Ah",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Ampere HourOut",
+                        "value": "350.01 Ah",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Charging Energy",
+                        "value": "3592.4656 kwh",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Discharging Energy",
+                        "value": "16.9822 kwh",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    },
+                    {
+                        "title": "Battery Run Hours",
+                        "value": "14:36:40",
+                        "iconUrl": "https://d10vfk1nvc618i.cloudfront.net/voltage.png"
+                    }
+                ]
+            }
+        ]
+    },
+    "data2": [
+        {
+            "id": "1",
+            "ctitle": "C001",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Charging"
+        },
+        {
+            "id": "2",
+            "ctitle": "C002",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Charging"
+        },
+        {
+            "id": "3",
+            "ctitle": "C003",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Charging"
+        },
+        {
+            "id": "4",
+            "ctitle": "C004",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Charging"
+        },
+        {
+            "id": "5",
+            "ctitle": "C005",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Not Communicating",
+            "CellStatus": "Discharging"
+        },
+        {
+            "id": "6",
+            "ctitle": "C006",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "High Voltage"
+        },
+        {
+            "id": "7",
+            "ctitle": "C007",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "High Temperature"
+        },
+        {
+            "id": "8",
+            "ctitle": "C008",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Not Communicating",
+            "CellStatus": "Common Fail"
+        },
+        {
+            "id": "9",
+            "ctitle": "C009",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Low Voltage"
+        },
+        {
+            "id": "10",
+            "ctitle": "C010",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "About To Die"
+        },
+        {
+            "id": "11",
+            "ctitle": "C011",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Open Battery"
+        },
+        {
+            "id": "12",
+            "ctitle": "C012",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Charging"
+        },
+        {
+            "id": "13",
+            "ctitle": "C013",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Not Communicating",
+            "CellStatus": "Discharging"
+        },
+        {
+            "id": "14",
+            "ctitle": "C014",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "High Voltage"
+        },
+        {
+            "id": "15",
+            "ctitle": "C015",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "High Temperature"
+        },
+        {
+            "id": "16",
+            "ctitle": "C016",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Not Communicating",
+            "CellStatus": "Common Fail"
+        },
+        {
+            "id": "17",
+            "ctitle": "C017",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Low Voltage"
+        },
+        {
+            "id": "18",
+            "ctitle": "C018",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "About To Die"
+        },
+        {
+            "id": "19",
+            "ctitle": "C019",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Open Battery"
+        },
+        {
+            "id": "1",
+            "ctitle": "C001",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Charging"
+        },
+        {
+            "id": "2",
+            "ctitle": "C002",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Charging"
+        },
+        {
+            "id": "3",
+            "ctitle": "C003",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Charging"
+        },
+        {
+            "id": "4",
+            "ctitle": "C004",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Charging"
+        },
+        {
+            "id": "5",
+            "ctitle": "C005",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Not Communicating",
+            "CellStatus": "Discharging"
+        },
+        {
+            "id": "6",
+            "ctitle": "C006",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "High Voltage"
+        },
+        {
+            "id": "7",
+            "ctitle": "C007",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "High Temperature"
+        },
+        {
+            "id": "8",
+            "ctitle": "C008",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Not Communicating",
+            "CellStatus": "Common Fail"
+        },
+        {
+            "id": "9",
+            "ctitle": "C009",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Low Voltage"
+        },
+        {
+            "id": "10",
+            "ctitle": "C010",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "About To Die"
+        },
+        {
+            "id": "11",
+            "ctitle": "C011",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Open Battery"
+        },
+        {
+            "id": "12",
+            "ctitle": "C012",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Charging"
+        },
+        {
+            "id": "13",
+            "ctitle": "C013",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Not Communicating",
+            "CellStatus": "Discharging"
+        },
+        {
+            "id": "14",
+            "ctitle": "C014",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "High Voltage"
+        },
+        {
+            "id": "15",
+            "ctitle": "C015",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "High Temperature"
+        },
+        {
+            "id": "16",
+            "ctitle": "C016",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Not Communicating",
+            "CellStatus": "Common Fail"
+        },
+        {
+            "id": "17",
+            "ctitle": "C017",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Low Voltage"
+        },
+        {
+            "id": "18",
+            "ctitle": "C018",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "About To Die"
+        },
+        {
+            "id": "19",
+            "ctitle": "C019",
+            "icon": "https://d10vfk1nvc618i.cloudfront.net/voltage.png",
+            "Value1": "23.5 V",
+            "Value2": "98.3 C",
+            "Value3": "26.3 F",
+            "ComStatus": "Communicating",
+            "CellStatus": "Open Battery"
+        }
+    ]
+}
