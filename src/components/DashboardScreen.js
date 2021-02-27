@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import {withScriptjs, withGoogleMap, GoogleMap} from 'react-google-maps'
+import React, { useState, useEffect } from 'react';
+import { withScriptjs, withGoogleMap, GoogleMap } from 'react-google-maps'
 import moment from 'moment';
 import {
     BatteryStatusIcon,
@@ -13,23 +13,23 @@ import {
 import CellDataPopup from './CellDataPopup'
 import CellStatsPopup from './CellStatsPopup'
 
-import {Header, Footer, SliderBlock, Filters, TabsList} from './Common'
-import {CellDataJson, CellStatsJson} from '../jsons'
-import {getDashboardDetails, getDataFromUrl, getNotifications, requestList} from "../services/server";
+import { Header, Footer, SliderBlock, Filters, TabsList } from './Common'
+import { CellDataJson, CellStatsJson } from '../jsons'
+import { getDashboardDetails, getDataFromUrl, getNotifications, requestList } from "../services/server";
 import DayPickerInput from "react-day-picker/DayPickerInput";
-import cons, {serverApi} from "../helper/Consts";
+import cons, { serverApi } from "../helper/Consts";
 import ItemsCarousel from "react-items-carousel";
-import {isUserAuthenticated} from "../helper/isLoggedIn";
-import {getCookie, removeCookie, setCookie} from "../helper/Cookies";
-import {Map, Marker} from "google-maps-react";
+import { isUserAuthenticated } from "../helper/isLoggedIn";
+import { getCookie, removeCookie, setCookie } from "../helper/Cookies";
+import { Map, Marker } from "google-maps-react";
 import MapContainer from "./MapContainer";
 import NotificationsPopup from "./NotificationsPopup";
-import {set} from "echarts/src/util/clazz";
+import { set } from "echarts/src/util/clazz";
 import SitesDataPopup from "./SitesDataPopup";
 import {
     dashboardBg, dashboard_bg
 } from "../Assets";
-import {ManufactureDetailPopup} from "./index";
+import { ManufactureDetailPopup } from "./index";
 import ReactEcharts from "./ReactECharts";
 import { Chart } from "react-google-charts";
 
@@ -180,7 +180,7 @@ const Dashboard = (props) => {
         // getDataFromUrl(serverApi.GET_DEVICES_BY_SITE_ID + 0, handleDeviceData);
         resp.forEach(prop => {
 
-            loc.push({...prop.location, name: prop.name})
+            loc.push({ ...prop.location, name: prop.name })
         });
         setLocations(loc);
     };
@@ -241,11 +241,11 @@ const Dashboard = (props) => {
 
     };
     const renderRedirectToRoot = () => {
-      //  const isAuthTokenValid = isUserAuthenticated();
+        //  const isAuthTokenValid = isUserAuthenticated();
 
-       // if (!isAuthTokenValid) {
-            props.history.push("/")
-       //}
+        // if (!isAuthTokenValid) {
+        props.history.push("/")
+        //}
     };
 
 
@@ -261,54 +261,54 @@ const Dashboard = (props) => {
     }
     console.log("color,,,,", color);
     const pieColor = [
-        '#052440','#8b008b','#ff0000','#009354','#fcaf31','#8b0000'
+        '#052440', '#8b008b', '#ff0000', '#009354', '#fcaf31', '#8b0000'
     ];
 
 
     const pietheme = {
         color: pieColor,
         line: {
-            smooth : true,
+            smooth: true,
             symbol: 'emptyCircle',
-          //  symbolSize: 5
+            //  symbolSize: 5
         },
     };
-   var options = {
-/*        title: {
-            text: 'BMS Status',
-            subtext: '',
-            left: 'center',
-            textStyle:{
-                lineHeight:80,
-                marginBottom:"20px"
-            }
-        },*/
+    var options = {
+        /*        title: {
+                    text: 'BMS Status',
+                    subtext: '',
+                    left: 'center',
+                    textStyle:{
+                        lineHeight:80,
+                        marginBottom:"20px"
+                    }
+                },*/
 
         tooltip: {
             trigger: 'item'
         },
-       legend: {
-           bottom: 10,
-           left: 'center',
-           data: ['西凉', '益州', '兖州', '荆州', '幽州']
-       },
+        legend: {
+            bottom: 10,
+            left: 'center',
+            data: ['西凉', '益州', '兖州', '荆州', '幽州']
+        },
         series: [
             {
                 name: 'Parameters',
                 type: 'pie',
                 radius: '80%',
-                data:dashboardData&&dashboardData.length>0?dashboardData.map(prop=>{
-                    var val=prop.footer.split(" ");
-                    return   {value: parseInt(val[0]), name: prop.title}
-                }): [
-                    {value: 1048, name: 'String Voltage'},
-                    {value: 735, name: 'String Current'},
-                    {value: 580, name: 'Battery Status'},
-                    {value: 484, name: 'Ambient Teperature'},
-                    {value: 300, name: 'State Of Charge'},
-                    {value: 300, name: 'Site Communication'}
+                data: dashboardData && dashboardData.length > 0 ? dashboardData.map(prop => {
+                    var val = prop.footer.split(" ");
+                    return { value: parseInt(val[0]), name: prop.title }
+                }) : [
+                        { value: 1048, name: 'String Voltage' },
+                        { value: 735, name: 'String Current' },
+                        { value: 580, name: 'Battery Status' },
+                        { value: 484, name: 'Ambient Teperature' },
+                        { value: 300, name: 'State Of Charge' },
+                        { value: 300, name: 'Site Communication' }
 
-                ],
+                    ],
                 emphasis: {
                     itemStyle: {
                         shadowBlur: 10,
@@ -319,20 +319,20 @@ const Dashboard = (props) => {
             }
         ]
     };
-   var chartData=[]
-    chartData.push(   ['Parameter', 'value'])
-    if(dashboardData)
-       dashboardData.map(prop=>{
-       var val=prop.footer.split(" ");
-       chartData.push(  [prop.title,parseInt(val[0])])
-   });
+    var chartData = []
+    chartData.push(['Parameter', 'value'])
+    if (dashboardData)
+        dashboardData.map(prop => {
+            var val = prop.footer.split(" ");
+            chartData.push([prop.title, parseInt(val[0])])
+        });
     return (
         <div>
             <div className="mainBlock">
-{/*
+                {/*
                 {renderRedirectToRoot()}
 */}
-                <Header notifications={notifications} redirect={renderRedirectToRoot}/>
+                <Header notifications={notifications} redirect={renderRedirectToRoot} />
                 <div className="fliterOptions">
                     <div className="container-fluid">
                         <ul>
@@ -345,36 +345,36 @@ const Dashboard = (props) => {
                             <div >Select Site<i className="fa fa-filter" aria-hidden="true" /></div>
 */}
                                 <select className="siteOptions" placeholder={"Select Site"}
-                                        value={sitesId !== null ? sitesId.name : "All Sites"} onChange={(event) => {
-                                    console.log("select", event.target.value);
-                                    if ("All Sites" === event.target.value) {
-                                        setSitesId(null);
-                                        setDeviceData([]);
-                                        setDevice(null);
-                                        setDashboardData([]);
-                                        getDataFromUrl(serverApi.GET_ALL_SITE_DATA + userId, handleDashboard);
-                                        /*   getDashboardDetails({
-                                               "auth": getCookie(cons.TOKEN_DATA)
-                                           }, handleDashboard);*/
+                                    value={sitesId !== null ? sitesId.name : "All Sites"} onChange={(event) => {
+                                        console.log("select", event.target.value);
+                                        if ("All Sites" === event.target.value) {
+                                            setSitesId(null);
+                                            setDeviceData([]);
+                                            setDevice(null);
+                                            setDashboardData([]);
+                                            getDataFromUrl(serverApi.GET_ALL_SITE_DATA + userId, handleDashboard);
+                                            /*   getDashboardDetails({
+                                                   "auth": getCookie(cons.TOKEN_DATA)
+                                               }, handleDashboard);*/
 
-                                    } else
-                                        sitesData.forEach(o => {
-                                            if (o.name + "" === event.target.value) {
-                                                setSitesId(o);
-                                                setDevice(null);
-                                                setDeviceData([])
-
-
-                                                getDataFromUrl(serverApi.GET_DEVICES_BY_SITE_ID + o.id, handleDeviceData);
-                                                /* getDashboardDetails({
-                                                     "siteId": o.id,
-                                                     "auth":getCookie(cons.TOKEN_DATA)
-                                                 },handleDashboard);*/
+                                        } else
+                                            sitesData.forEach(o => {
+                                                if (o.name + "" === event.target.value) {
+                                                    setSitesId(o);
+                                                    setDevice(null);
+                                                    setDeviceData([])
 
 
-                                            }
-                                        });
-                                }}>
+                                                    getDataFromUrl(serverApi.GET_DEVICES_BY_SITE_ID + o.id, handleDeviceData);
+                                                    /* getDashboardDetails({
+                                                         "siteId": o.id,
+                                                         "auth":getCookie(cons.TOKEN_DATA)
+                                                     },handleDashboard);*/
+
+
+                                                }
+                                            });
+                                    }}>
                                     <option>All Sites</option>
                                     {sitesData.length > 0 ? sitesData.map(prop => {
                                         return (<option>{prop.name}</option>)
@@ -388,23 +388,23 @@ const Dashboard = (props) => {
                             }}>
                                 {/* <div >Select Device</div>*/}
 
-                                <select placeholder={"Select Device"}  className="siteOptions"
-                                        value={device !== null ? device.serialNo : "All Devices"} onChange={(event) => {
-                                    deviceData.forEach(o => {
-                                        if (o.serialNo + "" === event.target.value) {
-                                            // getDataFromUrl(serverApi.GET_SINGLE_SITE_DATA+sitesId.id+"/"+o.id, handleSiteDashboard);
-                                            /*
-                                                                                    getDashboardDetails({
-                                                                                        "siteId": sitesId.id,
-                                                                                        "serialNo": o.id,
-                                                                                        "auth":getCookie(cons.TOKEN_DATA)
-                                                                                    },handleDashboard);
-                                            */
-                                            setSingleLoading(true);
-                                            setDevice(o)
-                                        }
-                                    });
-                                }}>
+                                <select placeholder={"Select Device"} className="siteOptions"
+                                    value={device !== null ? device.serialNo : "All Devices"} onChange={(event) => {
+                                        deviceData.forEach(o => {
+                                            if (o.serialNo + "" === event.target.value) {
+                                                // getDataFromUrl(serverApi.GET_SINGLE_SITE_DATA+sitesId.id+"/"+o.id, handleSiteDashboard);
+                                                /*
+                                                                                        getDashboardDetails({
+                                                                                            "siteId": sitesId.id,
+                                                                                            "serialNo": o.id,
+                                                                                            "auth":getCookie(cons.TOKEN_DATA)
+                                                                                        },handleDashboard);
+                                                */
+                                                setSingleLoading(true);
+                                                setDevice(o)
+                                            }
+                                        });
+                                    }}>
                                     <option>All Devices</option>
                                     {deviceData.length > 0 ? deviceData.map(prop => {
                                         return (<option>{prop.serialNo}</option>)
@@ -414,7 +414,7 @@ const Dashboard = (props) => {
                             </li>
                             {sitesId === null && info && info.length > 0 ?
                                 info.map((prop, i) => {
-                                    var color = "#052440", width = "15.4%",margin="15px";
+                                    var color = "#052440", width = "15.4%", margin = "15px";
                                     if (i === 1)
                                         color = "red";
                                     else if (i === 2)
@@ -422,14 +422,14 @@ const Dashboard = (props) => {
                                     else if (i === 3) {
                                         color = "#fcaf31";
                                         width = "16.2%"
-                                        margin="0px"
+                                        margin = "0px"
                                     }
 
                                     return (
                                         <li style={{
                                             width: width,
-                                            backgroundColor: color,
-                                            marginRight:margin,
+                                            color: '#000000',
+                                            marginRight: margin,
                                             border: "1px solid #ececec",
                                             borderRadius: "5px",
                                             textAlign: "center",
@@ -442,7 +442,7 @@ const Dashboard = (props) => {
                                                     setIsSite(true)
                                                 }
                                             }}>
-                                                <div style={{color: "#FFFFFF", marginTop: "5px"}}>{prop.value}
+                                                <div style={{ marginTop: "5px" }}>{prop.value}
                                                     <span>{prop.head}</span></div>
                                                 {/*
                                                 <div className="numberRightBlock">
@@ -463,7 +463,7 @@ const Dashboard = (props) => {
                         </li>
 */}
                         </ul>
-                        {sitesId !== null ? <div className="lastPacket" style={{color: color}}>Last Packet Received Time
+                        {sitesId !== null ? <div className="lastPacket" style={{ color: color }}>Last Packet Received Time
                             : {lastPacketReceivedTime}</div> : null}
                     </div>
                 </div>
@@ -544,9 +544,9 @@ const Dashboard = (props) => {
                                     return (
                                         <div className="SingleSlide">
                                             <div className={activeItemIndex == index ? "block activeSlide" : "block"}
-                                                 onClick={() => handleClick(index)}>
+                                                onClick={() => handleClick(index)}>
                                                 <div className="title">{item.title}</div>
-                                                <div><img src={item.iconUrl}/></div>
+                                                <div><img src={item.iconUrl} /></div>
                                                 <div className="subtitle">{item.footer}</div>
                                             </div>
                                         </div>)
@@ -570,7 +570,7 @@ const Dashboard = (props) => {
                                     ...sitesId.location,
                                     name: sitesId.name
                                 } : sitesData.length > 0 ? sitesData[0].location : null}
-                                              onClickSite={onClickSiteOnMap}/>
+                                    onClickSite={onClickSiteOnMap} />
 
 
                                 {/*
@@ -587,24 +587,26 @@ const Dashboard = (props) => {
 */}
                             </div>
 
-                            <div    style={{float:"right",width:"48%", border: '1px solid #dfdfdf',height:"260px",
-                                borderRadius: '4px',marginTop:"10px",marginLeft:"20px"}}>
-                               <div className="title">BMS Status</div>
-                                {dashboardData&&dashboardData.length>0  ? <Chart
+                            <div style={{
+                                float: "right", width: "48%", border: '1px solid #dfdfdf', height: "260px",
+                                borderRadius: '4px', marginTop: "10px", marginLeft: "20px"
+                            }}>
+                                <div className="title">Summary</div>
+                                {dashboardData && dashboardData.length > 0 ? <Chart
                                     chartType="PieChart"
                                     loader={<div>Loading Chart</div>}
                                     data={chartData}
                                     options={{
-                                        width:700,
-                                        height:300,
-                                       // title: 'My Daily Activities',
+                                        width: 700,
+                                        height: 300,
+                                        // title: 'My Daily Activities',
                                         // Just add this option
                                         is3D: true,
                                         pieSliceText: 'value'
                                     }}
                                     rootProps={{ 'data-testid': '1' }}
-                                />:null}
-{/*
+                                /> : null}
+                                {/*
                                 <ReactEcharts option={options}
                                               theme={pietheme}
                                               showLoading={false}/>
@@ -784,7 +786,7 @@ const Dashboard = (props) => {
 
                                     </div> : null
                                 }
-                                {dashboardData[activeItemIndex].title === "Manufacturer Details" ?
+                                {dashboardData[activeItemIndex].title === "Mfg. Details" ?
                                     <div>
                                         <div style={{
                                             width: "100%",
@@ -818,7 +820,7 @@ const Dashboard = (props) => {
                                 }
 
                                 {dashboardData[activeItemIndex].data && dashboardData[activeItemIndex].data.map((record, index) => {
-                                    if (dashboardData[activeItemIndex].title !== "String Info" && dashboardData[activeItemIndex].title !== "Manufacturer Details")
+                                    if (dashboardData[activeItemIndex].title !== "String Info" && dashboardData[activeItemIndex].title !== "Mfg. Details")
                                         return <div className="betteryBlockAll" key={index} onClick={() => {
                                             if (dashboardData[activeItemIndex].title === "Cell Status" || dashboardData[activeItemIndex].title === "Cell Info" || dashboardData[activeItemIndex].title === "Battery Status") {
                                                 setSelectedCell(record.title);
@@ -889,8 +891,8 @@ const Dashboard = (props) => {
                                             }
                                         }}>
 
-                                            <div style={{width: "100%"}}>
-                                                <div className="betteryStatusImage"><img src={record.iconUrl}/></div>
+                                            <div style={{ width: "100%" }}>
+                                                <div className="betteryStatusImage"><img src={record.iconUrl} /></div>
                                                 <div className="celldata_img_right">
                                                     <div className="cellcount">{record.value}</div>
                                                     <div>{record.title}</div>
@@ -911,24 +913,24 @@ const Dashboard = (props) => {
                         {sitesId !== null ? <div className="staticBlock block">
                             <div className="title">Statistics</div>
                             <div className="subtitle">Average statistics of
-                                the {sitesId !== null ? sitesId.name : ""} site
+                                the <b>{sitesId !== null ? sitesId.name : ""}</b> site
                             </div>
                             <div className="listBlock">
                                 <div className="row">
-                                    <div className="img"><img src={statisticsIcon}/></div>
+                                    <div className="img"><img src={statisticsIcon} /></div>
                                     <div className="content">See all statistics & Graphs</div>
                                     <div className="viewMore" onClick={handleClickonData}>View All</div>
                                 </div>
                                 <div className="row">
-                                    <div className="img"><img src={technicalDetailsIcon}/></div>
-                                    <div className="content">See all technical<br/>and device details</div>
+                                    <div className="img"><img src={technicalDetailsIcon} /></div>
+                                    <div className="content">See all technical<br />and device details</div>
 
                                     <div className="viewMore" onClick={handleClickonManufacture}>View All</div>
 
                                 </div>
                                 <div className="row">
-                                    <div className="img"><img src={notificationBell}/></div>
-                                    <div className="content">See all notifications<br/> and others</div>
+                                    <div className="img"><img src={notificationBell} /></div>
+                                    <div className="content">See all notifications<br /> and others</div>
 
                                     <div className="viewMore" onClick={handleClickonnotifications}>View All</div>
 
@@ -939,29 +941,29 @@ const Dashboard = (props) => {
                 </div>
 
             </div>
-            <Footer/>
+            <Footer />
             {cellData ?
                 <CellDataPopup dataResponse={cellsData ? cellsData : []} site={sitesId !== null ? sitesId.name : ""}
-                               device={device !== null ? device.serialNo : ""} closePopup={handleClickonCellData}
-                               loading={loading} selectedCell={selectedCell}
-                               allCells={dashboardData[activeItemIndex] ? dashboardData[activeItemIndex].data : []}
-                               iconsData={iconsData ? iconsData : null} lastPacketReceivedTime={lastPacketReceivedTime}
-                               statasticsData={statasticsData ? statasticsData : []}/> : null}
+                    device={device !== null ? device.serialNo : ""} closePopup={handleClickonCellData}
+                    loading={loading} selectedCell={selectedCell}
+                    allCells={dashboardData[activeItemIndex] ? dashboardData[activeItemIndex].data : []}
+                    iconsData={iconsData ? iconsData : null} lastPacketReceivedTime={lastPacketReceivedTime}
+                    statasticsData={statasticsData ? statasticsData : []} /> : null}
             {cellStats ? <CellStatsPopup dataResponse={statasticsData ? statasticsData : []}
-                                         site={sitesId !== null ? sitesId.name : ""}
-                                         device={device !== null ? device : ""} siteId={sitesId} sitesData={sitesData}
-                                         deviceData={deviceData} closePopup={handleClickonStats} loading={loading}
-                                         dashboardData={dashboardData}
-                                         cellsData={statasticsData ? statasticsData : []}/> : null}
+                site={sitesId !== null ? sitesId.name : ""}
+                device={device !== null ? device : ""} siteId={sitesId} sitesData={sitesData}
+                deviceData={deviceData} closePopup={handleClickonStats} loading={loading}
+                dashboardData={dashboardData}
+                cellsData={statasticsData ? statasticsData : []} /> : null}
             {notifStats ? <NotificationsPopup dataResponse={notifications.length > 0 ? notifications : []}
-                                              closePopup={handleClickonnotifications} loading={loading}/> : null}
+                closePopup={handleClickonnotifications} loading={loading} /> : null}
             {sitesPopup ?
                 <SitesDataPopup data={sitesData.length > 0 ? sitesData : []} closePopup={handleClickSitesPopup}
-                                loading={loading} name={sitesPopupText}
-                                sites={dashboardData[activeItemIndex] ? dashboardData[activeItemIndex].data : []} isSite={isSite}/> : null}
+                    loading={loading} name={sitesPopupText}
+                    sites={dashboardData[activeItemIndex] ? dashboardData[activeItemIndex].data : []} isSite={isSite} /> : null}
             {manufacturePopup ? <ManufactureDetailPopup dataResponse={dashboardData.length > 0 ? dashboardData : []}
-                                                        closePopup={handleClickonManufacture}
-                                                        loading={loading}/> : null}
+                closePopup={handleClickonManufacture}
+                loading={loading} /> : null}
 
         </div>
     );

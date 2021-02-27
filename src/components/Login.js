@@ -7,7 +7,7 @@ import {
 } from "../Assets";
 import { requestList } from "../services/server";
 import cons, { serverApi } from "../helper/Consts";
-import {getCookie, setCookie} from "../helper/Cookies";
+import { getCookie, setCookie } from "../helper/Cookies";
 import { isUserAuthenticated } from "../helper/isLoggedIn";
 import ChangePassword from "./ChangePassword";
 
@@ -17,7 +17,7 @@ const Login = (props) => {
     const [showpassword, setShowpassword] = useState(false)
     const [changePassword, setChangePassword] = useState(false);
     const [loading, setLoading] = useState(false);
-
+    const [error, SetError] = useState('')
 
     const handleSubmit = () => {
         if (username && password) {
@@ -29,7 +29,7 @@ const Login = (props) => {
             // service call & navigation goesr herei
             //console.log("username and password", username, password)
         } else {
-            alert("Username or Password are missing")
+            SetError("Incorrect Username/Password!!")
         }
 
     };
@@ -45,7 +45,7 @@ const Login = (props) => {
     };
 
     const handleChange = (e, variable) => {
-
+        SetError('')
         if (variable == "uname") {
             setUsername(e.target.value)
         } else {
@@ -69,7 +69,7 @@ const Login = (props) => {
         }
 
     };
-    const handleClickonChangePassword=()=>{
+    const handleClickonChangePassword = () => {
         setLoading(false);
         setChangePassword(!changePassword);
     }
@@ -77,7 +77,7 @@ const Login = (props) => {
     return (
         <div /*style={{ backgroundImage: "url(" + loginBg + ")", backgroundRepeat: 'repeat-y', float: "left", width: '100%', height: '100vh', backgroundSize: 'cover' }}*/>
             {renderRedirectToRoot()}
-            {changePassword ? <ChangePassword  closePopup={handleClickonChangePassword} loading={loading} /> : null}
+            {changePassword ? <ChangePassword closePopup={handleClickonChangePassword} loading={loading} /> : null}
 
             <div className="loginformcontainer">
 
@@ -87,13 +87,13 @@ const Login = (props) => {
                 <div className="usernameblock">
                     <label htmlFor="uname"><b>Username or Email Address</b></label>
                     <div className="inputblock">
-                        <input type="text" value={username} placeholder="Enter Username" onChange={(e) => handleChange(e, "uname")} />
+                        <input type="text" value={username} placeholder="Enter Username" onChange={(e) => handleChange(e, "uname")} className="errorHighlight" />
                         <span className="symbol-input">
-                        {/* <img className="usernameImage" src={UserNameIcon} /> */}
+                            {/* <img className="usernameImage" src={UserNameIcon} /> */}
                             <i class="material-icons">
-                            person
+                                person
 </i>
-                    </span>
+                        </span>
                     </div>
                 </div>
                 <div className="pswblock">
@@ -101,14 +101,15 @@ const Login = (props) => {
                     <div className="inputblock">
                         <input type={showpassword ? "password" : "text"} value={password} placeholder="**********" onChange={(e) => handleChange(e, "pass")} />
                         <span className="symbol-input" onClick={handleVisibility} style={{ cursor: 'pointer' }}>
-                        <i class="material-icons" style={{ marginTop: 10 }}>{showpassword ? "visibility" : "visibility_off"}</i>
-                    </span>
+                            <i class="material-icons" style={{ marginTop: 10 }}>{showpassword ? "visibility" : "visibility_off"}</i>
+                        </span>
                     </div>
                 </div>
+                <div className="errormsg">{error ? "Incorrect Username/Password!!" : null}</div>
                 <button type="submit" onClick={handleSubmit}>Sign In</button>
                 <label style={{ textAlign: 'center', width: '100%' }} >
-                    <span className="psw" onClick={()=>{
-                        console.log("cc",changePassword)
+                    <span className="psw" onClick={() => {
+                        console.log("cc", changePassword)
                         setChangePassword(true)
                     }}> Forgot password?</span>
                 </label>

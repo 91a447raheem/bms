@@ -26,8 +26,15 @@ const Header = (props) => {
     return (<header>
         <div className="headerBlock">
             <div className="container-fluid">
-                <div className="logo_block"><img src={logo} width={90} height={40} /><span style={{ marginLeft: "15px", fontWeight: "bold" }}>BATTERY MANAGEMENT SYSTEM</span></div>
-                <div className="right_block">
+                <div className="logo_block"><img src={logo} width={90} height={40} /><span style={{ marginLeft: "15px", fontWeight: "bold" }}></span></div>
+                <div className="header_mid">BATTERY MANAGEMENT SYSTEM</div>
+                <div className="right_block header_right">
+                    <div className="site_selection">
+                        <select class="site_selection_options">
+                            <option selected={true}>Battery Management System</option>
+                            <option>Aqua Thantra</option>
+                        </select>
+                    </div>
                     <div className="notificationIcon">
                         <i className="fa fa-bell" aria-hidden="true" style={{ cursor: "pointer" }} onClick={() => {
                             if (notifications) {
@@ -57,13 +64,13 @@ const Header = (props) => {
                         <MenuItem onClick={() => {
                             open(null);
 
-                        }}>Configuration</MenuItem>
+                        }}>Cpanel</MenuItem>
 
                         <MenuItem onClick={() => {
                             open(null);
                             removeCookies();
                             props.redirect();
-                          //  window.location.reload();
+                            //  window.location.reload();
 
                         }}>Logout</MenuItem>
                     </Menu>

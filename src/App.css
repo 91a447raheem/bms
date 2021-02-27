@@ -107,9 +107,32 @@ span.symbol-input{
     font-size: 23px;
 }
 .logo_block {
-    width: 80%;
+    width: 30%;
     float: left;
     margin-top: 5px;
+}
+.header_mid{
+    width: 40%;
+    text-align: center;
+    float: left;
+}
+.header_right{
+    width: 22%;
+}
+.site_selection {
+    float: left;
+    margin-top: 4px;
+    margin-right: 10px;
+}
+.errormsg {
+    width: 100%;
+    float: left;
+    text-align: center;
+    color: red;
+    min-height: 28px;
+}
+.site_selection select{
+    padding: 5px 10px;
 }
 .userProfile {
     float: right;
@@ -131,6 +154,7 @@ span.symbol-input{
     float: left;
     width: 35px;
     margin-top: 8px;
+    margin-left: 10px;
 }
 .logo_block a{
     color: #fff;
@@ -857,7 +881,7 @@ td.highrisk {
     width: 100%;
     margin: 0px auto;
     margin-top: 30px;
-    max-width: 1300px;
+    max-width: calc(100% - 50px);
     margin-bottom: 20px;
 }
 .rcs_arrowBtn.rcs_previous{
@@ -1044,6 +1068,7 @@ td.highrisk {
     width: 100%;
     float: left;
     border-radius: 5px;
+    height: calc(100vh - 190px);
 }
 /*::-webkit-scrollbar {
      display: none;

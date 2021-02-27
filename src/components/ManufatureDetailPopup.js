@@ -1,21 +1,21 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { Loader } from './Common'
 import { returnActioncls } from '../utils'
 
 const ManufactureDetailPopup = (props) => {
-    const { closePopup, dataResponse, loading,site,device } = props
-var data=[];
-  //  const [data,setData]=useState([])
-    if(dataResponse)
-    dataResponse.forEach(prop=>{
-        console.log("ggggg",prop.title)
+    const { closePopup, dataResponse, loading, site, device } = props
+    var data = [];
+    //  const [data,setData]=useState([])
+    if (dataResponse)
+        dataResponse.forEach(prop => {
+            console.log("ggggg", prop.title)
 
-        if(prop.title==="Manufacturer Details"){
-            data=prop.data
-           // setData(prop.data)
-            console.log("mannnnnnnnn",prop.data)
-        }
-    });
+            if (prop.title === "Mfg. Details") {
+                data = prop.data
+                // setData(prop.data)
+                console.log("mannnnnnnnn", prop.data)
+            }
+        });
     return (
         <div className="popupBlockContainer">
             <div className="popupBlockMain">
@@ -32,11 +32,11 @@ var data=[];
                             <div className="popupTitleBlock">
                                 <div className="popupTitleLeftSites">
                                     <div className="popupTitle">See all technical and device details</div>
-{/*
+                                    {/*
                                     <div className="popupSubTitle">complete analytics cell data</div>
 */}
                                 </div>
-{/*
+                                {/*
                                 <div className="sitePercentage">{percentage}%<div className="meter">
                                     <span style={{ width: `${percentage}%` }} />
                                 </div></div>
