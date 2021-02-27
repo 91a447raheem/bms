@@ -590,7 +590,7 @@ const CellStatsPopup = (props) => {
                                         ]
                                     }}
                                     showLoading={false}
-                                    style={{ height: '500vh', width: '100%' }} />
+                                    style={{ height: '500px', width: '100%' }} />
                             </div> :
                                 <div className="popupTable">
                                     {tableData ? <ReactTable
