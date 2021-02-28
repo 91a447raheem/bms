@@ -115,10 +115,11 @@ const Dashboard = (props) => {
         });
     };
     const handleClickSitesPopup = (id) => {
+        console.log("Handle Clicked On Site Popup", id)
         // Once after service call we need to fetch the stop the loader
         setLoading(false);
         setSitesPopup(!sitesPopup);
-        if (id !== null) {
+        if (id != null) {
             //  getDataFromUrl(serverApi.GET_SINGLE_SITE_DATA+id+device.id, handleSiteDashboard);
             setSitesId(id);
 
@@ -148,7 +149,7 @@ const Dashboard = (props) => {
             getDataFromUrl(serverApi.GET_ALL_SITE_DATA + userId, handleDashboard);
 
         } else {
-            if (sitesId !== null && device !== null)
+            if (sitesId != null && device != null)
                 getDataFromUrl(serverApi.GET_SINGLE_SITE_DATA + sitesId.id + "/" + device.serialNo, handleSiteDashboard);
 
             /*   getDataFromUrl(serverApi.GET_DEVICES_BY_SITE_ID + sitesId.id, handleDeviceData);
@@ -159,7 +160,7 @@ const Dashboard = (props) => {
 
     }, []);
     useEffect(() => {
-        if (sitesId !== null && device !== null && singleloading) {
+        if (sitesId != null && device != null && singleloading) {
             getDataFromUrl(serverApi.GET_SINGLE_SITE_DATA + sitesId.id + "/" + device.serialNo, handleSiteDashboard);
             setSingleLoading(false)
         }
@@ -345,7 +346,7 @@ const Dashboard = (props) => {
                             <div >Select Site<i className="fa fa-filter" aria-hidden="true" /></div>
 */}
                                 <select className="siteOptions" placeholder={"Select Site"}
-                                    value={sitesId !== null ? sitesId.name : "All Sites"} onChange={(event) => {
+                                    value={sitesId != null ? sitesId.name : "All Sites"} onChange={(event) => {
                                         console.log("select", event.target.value);
                                         if ("All Sites" === event.target.value) {
                                             setSitesId(null);
@@ -389,7 +390,7 @@ const Dashboard = (props) => {
                                 {/* <div >Select Device</div>*/}
 
                                 <select placeholder={"Select Device"} className="siteOptions"
-                                    value={device !== null ? device.serialNo : "All Devices"} onChange={(event) => {
+                                    value={device != null ? device.serialNo : "All Devices"} onChange={(event) => {
                                         deviceData.forEach(o => {
                                             if (o.serialNo + "" === event.target.value) {
                                                 // getDataFromUrl(serverApi.GET_SINGLE_SITE_DATA+sitesId.id+"/"+o.id, handleSiteDashboard);
@@ -463,7 +464,7 @@ const Dashboard = (props) => {
                         </li>
 */}
                         </ul>
-                        {sitesId !== null ? <div className="lastPacket" style={{ color: color }}>Last Packet Received Time
+                        {sitesId != null ? <div className="lastPacket" style={{ color: color }}>Last Packet Received Time
                             : {lastPacketReceivedTime}</div> : null}
                     </div>
                 </div>
