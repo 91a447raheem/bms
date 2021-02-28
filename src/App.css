@@ -364,16 +364,17 @@ select::-ms-expand {
     margin-top: 13px;
     width:100% !important;
         text-transform: capitalize;
-        color: #ffffff;
+        color: #000;
 }
 .dashboardBg{
-    background-image: url(./Assets/new_bg7.png);
+    /* background-image: url(./Assets/new_bg7.png); */
     background-repeat: repeat-y;
     float: left;
     width: 100%;
     height: calc(100% - 110px);
     background-size: 100% 600px;
-    padding-bottom: 10px;
+    padding:20px 0px
+    /* background: #ececec; */
 }
 .lastPacket{ text-align: center; color: green; font-weight: bold;float: right;margin-top: 5px;
     border: 2px solid #000;border-radius: 5px;padding-left: 3px;padding-right: 3px}
@@ -393,10 +394,15 @@ select::-ms-expand {
     width: 100%;
 }
 .sliderBlock .block {
-    border-right: 1px solid #dfdfdf;
     width: 100%;
     padding: 12px 7px;
     text-align: center;
+    text-align: center;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 0px 8px 0 rgb(0 0 0 / 20%);
+    margin-bottom: 10PX;
+    height: 100%;
 }
 .sliderBlock {
     float: left;
@@ -465,12 +471,13 @@ select::-ms-expand {
     float: left;
 }
 .block.activeSlide {
-    padding: 4px 7px;
     z-index: 9;
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
 }
 .activeSlide .title{
     font-weight: bold;
-    font-size: 22px;
+    font-size: 15px;
     margin-bottom: 12px;
     
 }
@@ -493,10 +500,10 @@ select::-ms-expand {
 }
 .SingleSlide .title{
      margin-bottom: 6;
-     font-size: 17;
+     font-size: 14;
      font-weight: bold;
      min-height: 47;
-     color: #ffffff;
+     color: #000;
 }
 .viewMore {
     width: 25%;
@@ -943,6 +950,8 @@ td.highrisk {
     border-radius: 4px;
     box-sizing: border-box;
     margin: 0 2px;
+    font-size: 12px !important;
+    margin-top: 7px;
 }
 .popupMainBlock {
     width: 100%;
@@ -1186,18 +1195,18 @@ span.preicon, span.nexticon {
 .dPzsDe, .clcBSf{
     top: 38% !important;
     background: transparent !important;
-    border: 2px solid #dfdfdf;
+    border: 2px solid #6f6f6f;
     border-radius: 50%;
     width: 40px !important;
     height: 40px !important;
 }
 .dPzsDe, .clcBSf{
-    color:#fff !important;
+    color:#6f6f6f !important;
 }
 .clcBSf:hover, .clcBSf:active, .dPzsDe:hover,.dPzsDe:active{
     background: #4caf50 !important;
     border: 2px solid #4caf50;
-    color:#fff;
+    color:#fff  !important;
 }
 .clcBSf{
     right: -43px !important;
